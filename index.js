@@ -37,6 +37,7 @@ function doRequest(options, data) {
 // This uses the method above to update a gist with the given data. The user agent is
 // required as defined in https://developer.github.com/v3/#user-agent-required
 function updateGist(data) {
+  console.log(data);
   const updateGistOptions = {
     host: 'api.github.com',
     path: '/gists/' + core.getInput('gistID'),
