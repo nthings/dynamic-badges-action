@@ -45,6 +45,7 @@ function updateGist(data) {
     headers: {
       'Accept': 'application/vnd.github+json',
       'X-GitHub-Api-Version': '2022-11-28',
+      'User-Agent': 'Schneegans',
       'Authorization': 'Bearer ' + core.getInput('auth'),
     }
   };
@@ -181,6 +182,7 @@ try {
       method: 'GET',
       headers: {
         'Accept': 'application/vnd.github+json',
+        'User-Agent': 'Schneegans',
         'X-GitHub-Api-Version': '2022-11-28',
         'Authorization': 'Bearer ' + core.getInput('auth'),
       }
