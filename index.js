@@ -43,10 +43,9 @@ function updateGist(data) {
     path: '/gists/' + core.getInput('gistID'),
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
-      'Content-Length': data.length,
-      'User-Agent': 'Schneegans',
-      'Authorization': 'token ' + core.getInput('auth'),
+      'Accept': 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      'Authorization': 'Bearer ' + core.getInput('auth'),
     }
   };
 
@@ -181,9 +180,9 @@ try {
       path: '/gists/' + core.getInput('gistID'),
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
-        'User-Agent': 'Schneegans',
-        'Authorization': 'token ' + core.getInput('auth'),
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28',
+        'Authorization': 'Bearer ' + core.getInput('auth'),
       }
     };
 
